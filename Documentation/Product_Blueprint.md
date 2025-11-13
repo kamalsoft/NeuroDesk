@@ -13,15 +13,14 @@ To be the bridge between customer voice requests and business action, ensuring n
 
 ### 1.2. Core Product Features
 
-#### Phase 1: MVP (Complete)
+#### Phase 1: Minimum Viable Product (MVP)
 
-- **Core Voice Ingestion:** Integration with a voice platform (e.g., Twilio) to receive audio recordings.
-- **Voice-to-Text & Basic Intent:** Transcription of voice messages and basic keyword-based intent recognition.
-- **Simple Escalation:** All unrecognized intents automatically create a ticket in a connected ticketing system (e.g., Zendesk).
-- **Contextual Ticket:** The created ticket includes the audio link, transcription, and customer phone number.
-- **Basic Ticketing UI:** A simple inbox view within NeuroDesk to see escalated tickets.
+- **Core Voice Ingestion:** A dedicated phone number to receive and record voicemails.
+- **Voice-to-Text & Intent Recognition:** Transcribes audio and performs basic intent recognition (e.g., "schedule appointment," "sales inquiry").
+- **Contextual Human Escalation:** If AI confidence is low, automatically creates a ticket in a built-in system with the full context (audio, transcription, intent).
+- **Basic Ticketing UI:** A simple interface for agents to view, manage, and respond to escalated tickets.
 
-#### Phase 2: Core Product (Current)
+#### Phase 2: Core Product
 
 - **Smart Workflow Engine:** A visual builder to create conditional logic (if/then/else) based on AI intent and confidence scores.
 - **Advanced Intent Recognition:** Use of NLP models (e.g., HuggingFace/OpenAI) for more accurate intent and entity recognition.
@@ -33,21 +32,20 @@ To be the bridge between customer voice requests and business action, ensuring n
 - **Industry-Specific Templates:** Pre-built workflow templates for auto dealerships, healthcare, and professional services.
 - **Advanced Analytics:** Dashboard showing intent trends, escalation rates, and resolution times.
 - **Outbound API:** Allow external systems to trigger NeuroDesk workflows.
-- **AI-Assisted Replies:** Suggest draft responses for agents handling escalated tickets.
-- **Sentiment Analysis:** Analyze the tone of a customer's message to flag frustrated or urgent requests.
-- **PII Redaction:** Automatically detect and redact sensitive Personally Identifiable Information (PII) from transcripts.
+- **AI-Assisted Replies:** Suggests responses for agents based on the ticket context.
 
 ---
 
 ## 2. Product Roadmap
 
-| Quarter    | Key Initiatives                                                                                  | Goals                                                                       |
-| :--------- | :----------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
-| **Q3 '25** | **MVP Beta Launch (Complete):** Onboarded 5 beta customers. Validated core voice-to-ticket flow. | Beta successful. Confirmed market need for workflow automation.             |
-| **Q4 '25** | **Phase 2 Launch (Current):** Launch Smart Workflow Engine, CRM integrations, and advanced AI.   | Public launch of v2.0. Drive user acquisition and adoption of new features. |
-| **Q1 '26** | **Enterprise Readiness:** Develop advanced analytics, PII redaction, and role-based access.      | Onboard first enterprise customers. Solidify security and compliance story. |
-| **Q2 '26** | **Ecosystem Expansion:** Build out more industry-specific templates and a public-facing API.     | Increase market share in key verticals. Foster a developer community.       |
-| **Q3 '26** | **Future: Proactive Outreach:** Begin R&D on outbound, AI-driven voice campaigns.                | Develop prototype for using NeuroDesk to make calls, not just receive them. |
+| Quarter  | Key Initiatives                                                                                     | Goals                                                                           |
+| :------- | :-------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ |
+| **Q1**   | **Discovery & Foundation:** Finalize MVP scope, set up infrastructure, build core voice service.    | Team assembled. Core infrastructure is live. MVP development begins.            |
+| **Q2**   | **MVP Development & Alpha:** Build intent recognition model and basic ticketing UI.                 | Internal alpha testing. Voice-to-ticket workflow is functional.                 |
+| **Q3**   | **MVP Beta Launch:** Onboard 5-10 friendly "beta" customers from the auto dealership vertical.      | Beta launch successful. Collect user feedback for Phase 2 prioritization.       |
+| **Q4**   | **Phase 2 Development:** Build the Smart Workflow Engine and initial CRM integrations.              | Core product features are code-complete and ready for testing.                  |
+| **Q1+1** | **Phase 2 Public Launch:** General availability of the core product with workflow builder.          | Public launch. Begin marketing and sales efforts. Monitor platform metrics.     |
+| **Q2+1** | **Phase 3 Planning & Development:** Begin work on industry-specific modules and advanced analytics. | Enterprise features are in development. Secure first enterprise pilot customer. |
 
 ---
 
@@ -58,9 +56,8 @@ To be the bridge between customer voice requests and business action, ensuring n
 - **Cloud Provider:** AWS, Google Cloud (GCP), or Azure. (Recommendation: **GCP** or **AWS**).
 - **Compute:**
   - **Web/API Servers:** Scalable virtual machines (e.g., GCP App Engine or AWS Elastic Beanstalk).
-- **ML Inference:** GPU-enabled instances for voice transcription and NLP models (e.g., GCP AI Platform, AWS SageMaker).
+- - **ML Training/Inference:** GPU-enabled instances for NLP models (e.g., GCP AI Platform).
 - **Storage:**
-- **Object Storage:** Cloud storage (GCP Cloud Storage / AWS S3) for audio recordings.
 - **Application DB:** Managed PostgreSQL or MySQL (e.g., GCP Cloud SQL / AWS RDS).
 - **Cache:** In-memory store like Redis for session management and caching.
 
@@ -74,21 +71,20 @@ To be the bridge between customer voice requests and business action, ensuring n
 - **Frontend:**
 - **Web Application:** **React.js** with **Tailwind CSS** for a modern, responsive UI.
 - **AI/ML:**
-  - **Libraries:** HuggingFace Transformers, OpenAI API client.
+  - **Libraries:** HuggingFace Transformers, PyTorch.
   - **Voice-to-Text:** Google Speech-to-Text or other third-party service.
 
 ---
 
 ## 4. Recommended Tools
 
-| Category                | Recommended Tool(s)          | Justification                                                          |
-| :---------------------- | :--------------------------- | :--------------------------------------------------------------------- |
-| **Project Management**  | **Jira** & **Confluence**    | Industry standard for agile development and documentation.             |
-| **Code Repository**     | **GitHub**                   | For source code management and CI/CD pipelines.                        |
-| **CI/CD**               | **GitHub Actions**           | To automate testing, builds, and deployments.                          |
-| **Monitoring**          | **Datadog** or **Sentry**    | For infrastructure, application performance (APM), and error tracking. |
-| **Support & Ticketing** | **Zendesk** or **Freshdesk** | For managing internal support and beta customer feedback.              |
-| **Collaboration**       | **Slack**                    | For real-time team communication.                                      |
+| Category                  | Recommended Tool(s)                       | Justification                                                                |
+| :------------------------ | :---------------------------------------- | :--------------------------------------------------------------------------- |
+| **Project Management**    | **Jira** & **Confluence**                 | Industry standard for agile development, sprint planning, and documentation. |
+| **Code Repository/CI/CD** | **GitHub** & **GitHub Actions**           | For source code management and to automate testing and deployments.          |
+| **Monitoring**            | **Datadog**, **Prometheus** & **Grafana** | For infrastructure, application performance (APM), and business metrics.     |
+| **Support & Ticketing**   | **Zendesk** or **Intercom**               | To manage customer support requests and build a knowledge base.              |
+| **Collaboration**         | **Slack**                                 | For real-time team communication and integrations with other tools.          |
 
 ---
 
@@ -209,39 +205,38 @@ Our Ideal Customer Profile (ICP) is any service-based business that relies on ph
 
 ### 8.3. Pricing & Packaging
 
-A three-tiered pricing model based on usage and features.
-
-| Tier           | Price (Monthly) | Key Features                                                                       | Target Audience                         |
-| :------------- | :-------------- | :--------------------------------------------------------------------------------- | :-------------------------------------- |
-| **Starter**    | **$149/mo**     | Up to 200 calls/month, Voice-to-Ticket escalation, Basic ticketing UI.             | Small businesses, solo practitioners.   |
-| **Pro**        | **$399/mo**     | Up to 750 calls/month, all Starter features + Workflow Builder, CRM Integration.   | Growing businesses, clinics.            |
-| **Enterprise** | **Custom**      | Unlimited calls, all Pro features + Sentiment Analysis, PII Redaction, API Access. | Multi-location businesses, large firms. |
+| Tier           | Price (Monthly) | Key Features                                                                               | Target Audience                                |
+| :------------- | :-------------- | :----------------------------------------------------------------------------------------- | :--------------------------------------------- |
+| **Starter**    | **$199/mo**     | 1 Phone Number, 250 calls/mo, Core voice-to-ticket escalation.                             | Small businesses & single locations.           |
+| **Pro**        | **$499/mo**     | 3 Phone Numbers, 1,000 calls/mo, all Starter features + Workflow Builder, CRM Integration. | Growing businesses, multiple departments.      |
+| **Enterprise** | **Custom**      | Unlimited calls, all Pro features + API Access, Dedicated Support, Custom Onboarding.      | Large franchises or multi-location businesses. |
 
 _A 14-day free trial of the Pro tier will be offered, requiring no credit card._
 
 ### 8.4. Marketing & Sales Channels
 
 - **Content Marketing:**
-- **Blog Posts:** Focus on SEO keywords like "missed call marketing," "dental office phone automation," and "law firm client intake."
-- **Case Studies:** Convert successful beta customers (e.g., a local auto dealership) into case studies showing "XX% reduction in missed leads."
-- **Whitepaper:** "The True Cost of a Missed Phone Call," used as a lead magnet.
+- **Blog Posts:** Focus on SEO keywords like "auto repair scheduling software," "missed call marketing," and "how to automate appointment booking."
+- **Case Studies:** Convert successful beta customers into detailed case studies showcasing a reduction in missed calls and an increase in booked appointments.
 - **Product-Led Growth (PLG):**
-- The frictionless 14-day trial is the core of the strategy. The onboarding must guide users to connect their phone number and see their first escalated ticket within minutes.
+- The frictionless 14-day trial is the core of the strategy. Onboarding must guide users to set up their first workflow and see a ticket created from a test call.
 - **Launch & PR:**
   - **Product Hunt Launch:** Plan a coordinated launch day to aim for "Product of the Day."
-- **Targeted Outreach:** Announce the launch in industry-specific forums (e.g., auto dealer forums, healthcare practice manager groups).
+- **Direct Outreach & Partnerships:**
+  - Target industry-specific associations (e.g., National Automobile Dealers Association).
+  - Build relationships with Managed Service Providers (MSPs) who serve our target verticals.
 - **Paid Acquisition:**
-- **LinkedIn Ads:** Target "Office Managers" and "Practice Managers" in our key industries.
-- **Google Ads:** Bid on high-intent keywords like "automated answering service for small business."
+- **LinkedIn Ads:** Target CSMs and Heads of Customer Success at SaaS companies with content and trial offers.
+- **Google Ads:** Bid on high-intent, long-tail keywords like "hubspot churn prediction tool."
 
 ### 8.5. Launch Goals & KPIs (First Quarter Post-Launch)
 
 | Metric                                  | Goal                   | How to Measure                                     |
 | :-------------------------------------- | :--------------------- | :------------------------------------------------- |
 | **New Trial Sign-ups**                  | 300                    | Count of new accounts created.                     |
-| **Activation Rate**                     | 50%                    | % of trials that connect a phone number.           |
+| **Activation Rate**                     | 40%                    | % of trials that connect at least one data source. |
 | **Trial-to-Paid Conversion**            | 10%                    | % of activated trials that convert to a paid plan. |
-| **New MRR (Monthly Recurring Revenue)** | $7,500                 | Sum of MRR from new paying customers.              |
+| **New MRR (Monthly Recurring Revenue)** | $12,000                | Sum of MRR from new paying customers.              |
 | **Website Traffic**                     | 10,000 unique visitors | Google Analytics.                                  |
 
 ### 8.6. Launch Timeline
@@ -257,7 +252,7 @@ _A 14-day free trial of the Pro tier will be offered, requiring no credit card._
 - **T-1 Week:**
   - Finalize Product Hunt assets (images, video, maker comment).
   - Schedule launch-day emails and social media posts.
-- **Launch Day (Q1+1):**
+- **Launch Day (Q4):**
   - Publish on Product Hunt.
   - Send announcement email to the waitlist and all contacts.
   - Activate paid ad campaigns.
@@ -277,32 +272,36 @@ This diagram provides a conceptual overview of the NeuroDesk system.
 ```mermaid
 graph TD
     subgraph "External World"
-        Customer[<fa:fa-phone> Customer]
-        Agent[<fa:fa-user> Support Agent]
+        Customer[<fa:fa-user> Customer]
+        Agent[<fa:fa-user-tie> Human Agent]
     end
 
     subgraph "Google Cloud Platform (GCP)"
         direction LR
 
         subgraph "Serving & API Layer (GKE)"
-            LB[<fa:fa-network-wired> Load Balancer] --> Frontend[Frontend Service<br>(React UI)]
-            LB --> BackendApi[Backend API]
+            direction TB
+            LB[<fa:fa-network-wired> Cloud Load Balancer] --> VoicePlatform[Voice Platform API <br>(e.g., Twilio)]
+            LB --> ApiGateway{API Gateway}
+            ApiGateway -->|/auth| AuthService[Auth Service]
+            ApiGateway -->|/api| BackendService[Backend API]
+            ApiGateway -->|/app| FrontendService[Frontend Service <br>(React)]
+
             Agent -- HTTPS --> LB
+            FrontendService -- Serves UI --> Agent
+            BackendService -- Reads/Writes --> AppDB[(<fa:fa-database> Cloud SQL <br>PostgreSQL)]
         end
 
         subgraph "Voice & AI Pipeline"
             direction TB
-            VoicePlatform[<fa:fa-tty> Voice Platform<br>(e.g., Twilio)]
-            VoiceService[Voice Ingestion Service]
-            AiService[AI Service<br>(Python/HuggingFace)]
-            WorkflowEngine[Smart Workflow Engine]
-
             Customer -- Calls --> VoicePlatform
             VoicePlatform -- Webhook w/ Audio --> VoiceService
-            VoiceService -- Text --> WorkflowEngine
-            WorkflowEngine -- "Analyze Request" --> AiService
-            AiService -- "Intent, Entities, Sentiment" --> WorkflowEngine
+            VoiceService -- Transcribes & Sends Text --> AIService[AI Service <br>(Intent Recognition)]
+            AIService -- Returns Intent & Score --> WorkflowEngine[Smart Workflow Engine]
             WorkflowEngine -- Executes/Escalates --> BackendApi
         end
     end
+
+    style Customer fill:#d4edda,stroke:#155724
+    style Agent fill:#cce5ff,stroke:#004085
 ```
