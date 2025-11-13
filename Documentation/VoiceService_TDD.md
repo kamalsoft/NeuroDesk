@@ -1,6 +1,6 @@
 # Technical Design Document: NeuroDesk Voice Service
 
-**Version:** 2.0
+**Version:** 1.0
 **Status:** Draft
 **Related Epics:** "Core Voice Pipeline"
 

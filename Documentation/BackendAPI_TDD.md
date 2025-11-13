@@ -1,6 +1,6 @@
 # Technical Design Document: Backend API Service
 
-**Version:** 2.0
+**Version:** 1.0
 **Status:** Draft
 **Related Epics:** "Basic User Interface", "Smart Workflow Engine"
 

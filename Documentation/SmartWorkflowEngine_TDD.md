@@ -1,6 +1,6 @@
 # Technical Design Document: Smart Workflow Engine
 
-**Version:** 2.0
+**Version:** 1.0
 **Status:** Draft
 **Related Epics:** "Smart Workflow Engine", "Intelligent Escalation"
 

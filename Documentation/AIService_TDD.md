@@ -1,6 +1,6 @@
 # Technical Design Document: AI Service
 
-**Version:** 2.0
+**Version:** 1.0
 **Status:** Draft
 **Related Epics:** "Core Voice Pipeline", "Intelligent Escalation"
 
