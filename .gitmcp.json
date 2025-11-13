@@ -18,6 +18,11 @@
     ],
     "requirements": [
       {
+        "name": "Core Features",
+        "path": "https://raw.githubusercontent.com/kamalsoft/NeuroDesk/main/Features.md",
+        "description": "A summary of the core features of the NeuroDesk platform, located in the root directory."
+      },
+      {
         "name": "Product Features",
         "path": "https://raw.githubusercontent.com/kamalsoft/NeuroDesk/main/Documentation/Product_Feature.md",
         "description": "High-level introduction and feature breakdown of the NeuroDesk platform."
