@@ -1,0 +1,49 @@
+{
+  "projectName": "NeuroDesk",
+  "projectVersion": "2.0",
+  "description": "An AI-powered voice automation platform that transforms customer voice requests into intelligent, actionable workflows and provides seamless human handoffs.",
+  "lastUpdated": "2025-11-13",
+  "documentation": {
+    "strategy": [
+      {
+        "name": "Product Blueprint",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\Product_Blueprint.md",
+        "description": "The master document outlining the product vision, features, roadmap, GTM strategy, and budget."
+      }
+    ],
+    "technical": [
+      {
+        "name": "Backend API TDD",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\BackendAPI_TDD.md",
+        "description": "Technical Design Document for the primary API service that serves the frontend."
+      },
+      {
+        "name": "AI Service TDD",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\AIService_TDD.md",
+        "description": "Technical Design Document for the microservice responsible for NLP, intent recognition, and sentiment analysis."
+      },
+      {
+        "name": "Smart Workflow Engine TDD",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\SmartWorkflowEngine_TDD.md",
+        "description": "Technical Design Document for the core service that executes automated business logic."
+      },
+      {
+        "name": "Voice Service TDD",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\VoiceService_TDD.md",
+        "description": "Technical Design Document for the service that ingests and transcribes voice calls."
+      }
+    ],
+    "marketing": [
+      {
+        "name": "Sales Slick",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\SalesSlick.md",
+        "description": "A one-page marketing document for sales and promotional activities."
+      },
+      {
+        "name": "Content Calendar",
+        "path": "c:\\dev\\NeuroDesk\\Documentation\\content_calendar.md",
+        "description": "The blog content calendar for the first month post-launch."
+      }
+    ]
+  }
+}
