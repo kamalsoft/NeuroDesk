@@ -38,14 +38,13 @@ To be the bridge between customer voice requests and business action, ensuring n
 
 ## 2. Product Roadmap
 
-| Quarter  | Key Initiatives                                                                                     | Goals                                                                           |
-| :------- | :-------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ |
-| **Q1**   | **Discovery & Foundation:** Finalize MVP scope, set up infrastructure, build core voice service.    | Team assembled. Core infrastructure is live. MVP development begins.            |
-| **Q2**   | **MVP Development & Alpha:** Build intent recognition model and basic ticketing UI.                 | Internal alpha testing. Voice-to-ticket workflow is functional.                 |
-| **Q3**   | **MVP Beta Launch:** Onboard 5-10 friendly "beta" customers from the auto dealership vertical.      | Beta launch successful. Collect user feedback for Phase 2 prioritization.       |
-| **Q4**   | **Phase 2 Development:** Build the Smart Workflow Engine and initial CRM integrations.              | Core product features are code-complete and ready for testing.                  |
-| **Q1+1** | **Phase 2 Public Launch:** General availability of the core product with workflow builder.          | Public launch. Begin marketing and sales efforts. Monitor platform metrics.     |
-| **Q2+1** | **Phase 3 Planning & Development:** Begin work on industry-specific modules and advanced analytics. | Enterprise features are in development. Secure first enterprise pilot customer. |
+| Quarter    | Key Initiatives                                                                                  | Goals                                                                       |
+| :--------- | :----------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| **Q3 '25** | **MVP Beta Launch (Complete):** Onboarded 5 beta customers. Validated core voice-to-ticket flow. | Beta successful. Confirmed market need for workflow automation.             |
+| **Q4 '25** | **Phase 2 Launch (Current):** Launch Smart Workflow Engine, CRM integrations, and advanced AI.   | Public launch of v2.0. Drive user acquisition and adoption of new features. |
+| **Q1 '26** | **Enterprise Readiness:** Develop advanced analytics, PII redaction, and role-based access.      | Onboard first enterprise customers. Solidify security and compliance story. |
+| **Q2 '26** | **Ecosystem Expansion:** Build out more industry-specific templates and a public-facing API.     | Increase market share in key verticals. Foster a developer community.       |
+| **Q3 '26** | **Future: Proactive Outreach:** Begin R&D on outbound, AI-driven voice campaigns.                | Develop prototype for using NeuroDesk to make calls, not just receive them. |
 
 ---
 
@@ -252,7 +251,7 @@ _A 14-day free trial of the Pro tier will be offered, requiring no credit card._
 - **T-1 Week:**
   - Finalize Product Hunt assets (images, video, maker comment).
   - Schedule launch-day emails and social media posts.
-- **Launch Day (Q4):**
+- **Launch Day (Q1+1):**
   - Publish on Product Hunt.
   - Send announcement email to the waitlist and all contacts.
   - Activate paid ad campaigns.
