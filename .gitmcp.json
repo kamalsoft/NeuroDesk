@@ -68,6 +68,13 @@
         "path": "https://raw.githubusercontent.com/kamalsoft/NeuroDesk/main/Documentation/TestingStrategy.md",
         "description": "The comprehensive strategy for ensuring product quality, from unit tests to security."
       }
+    ],
+    "support": [
+      {
+        "name": "Frequently Asked Questions (FAQ)",
+        "path": "https://raw.githubusercontent.com/kamalsoft/NeuroDesk/main/Documentation/faq.md",
+        "description": "A comprehensive, categorized list of answers to common questions about the project."
+      }
     ]
   }
 }

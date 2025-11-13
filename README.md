@@ -64,6 +64,12 @@ This project's documentation is cataloged in the [`.gitmcp.json`](.gitmcp.json) 
 
 ---
 
+### Support
+
+| Document Name                                            | Description                                                                         |
+| :------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| [Frequently Asked Questions (FAQ)](Documentation/faq.md) | A comprehensive, categorized list of answers to common questions about the project. |
+
 ## ⚙️ Getting Started
 
 1.  **Clone the Repository:**
